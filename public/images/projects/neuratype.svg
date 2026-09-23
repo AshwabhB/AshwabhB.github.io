@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="Inter, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1410"/><stop offset="1" stop-color="#120d09"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#db8f72"/></marker>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04"/></pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+  <text x="80" y="110" fill="#a89a8b" font-size="22" letter-spacing="6" font-weight="600">NEURATYPE   |   OFFLINE DICTATION FOR WINDOWS</text>
+  <text x="80" y="165" fill="#f0e6da" font-size="40" font-weight="700">Press a hotkey anywhere. Speak. Your words are pasted.</text>
+
+  <g transform="translate(80,300)">
+    <rect width="320" height="200" rx="20" fill="#1f1915" stroke="#2d2420" stroke-width="2"/>
+    <text x="160" y="70" text-anchor="middle" fill="#db8f72" font-size="30" font-family="JetBrains Mono, monospace" font-weight="600">Ctrl + Win</text>
+    <text x="160" y="115" text-anchor="middle" fill="#f0e6da" font-size="26" font-weight="700">Global hotkey</text>
+    <text x="160" y="152" text-anchor="middle" fill="#a89a8b" font-size="20">works from any app</text>
+  </g>
+  <line x1="410" y1="400" x2="490" y2="400" stroke="#db8f72" stroke-width="3" marker-end="url(#arrow)"/>
+  <g transform="translate(500,300)">
+    <rect width="320" height="200" rx="20" fill="#1f1915" stroke="#2d2420" stroke-width="2"/>
+    <g transform="translate(160,66)" fill="#db8f72"><rect x="-34" y="-18" width="10" height="36" rx="5"/><rect x="-18" y="-30" width="10" height="60" rx="5"/><rect x="-2" y="-12" width="10" height="24" rx="5"/><rect x="14" y="-26" width="10" height="52" rx="5"/><rect x="30" y="-8" width="10" height="16" rx="5"/></g>
+    <text x="160" y="140" text-anchor="middle" fill="#f0e6da" font-size="26" font-weight="700">Record audio</text>
+    <text x="160" y="175" text-anchor="middle" fill="#a89a8b" font-size="20">multi-threaded capture</text>
+  </g>
+  <line x1="830" y1="400" x2="910" y2="400" stroke="#db8f72" stroke-width="3" marker-end="url(#arrow)"/>
+  <g transform="translate(920,300)">
+    <rect width="320" height="200" rx="20" fill="#1f1915" stroke="#db8f72" stroke-width="2"/>
+    <text x="160" y="70" text-anchor="middle" fill="#dcae55" font-size="26" font-family="JetBrains Mono, monospace" font-weight="600">faster-whisper</text>
+    <text x="160" y="115" text-anchor="middle" fill="#f0e6da" font-size="26" font-weight="700">Transcribe locally</text>
+    <text x="160" y="152" text-anchor="middle" fill="#a89a8b" font-size="20">CTranslate2, CUDA or CPU</text>
+  </g>
+  <line x1="1250" y1="400" x2="1330" y2="400" stroke="#db8f72" stroke-width="3" marker-end="url(#arrow)"/>
+  <g transform="translate(1340,300)">
+    <rect width="180" height="200" rx="20" fill="#1f1915" stroke="#2d2420" stroke-width="2"/>
+    <text x="90" y="80" text-anchor="middle" fill="#db8f72" font-size="44" font-weight="700">Paste</text>
+    <text x="90" y="130" text-anchor="middle" fill="#a89a8b" font-size="20">into the</text>
+    <text x="90" y="158" text-anchor="middle" fill="#a89a8b" font-size="20">active field</text>
+  </g>
+
+  <g transform="translate(80,600)">
+    <rect width="1440" height="300" rx="20" fill="#1b1511" stroke="#2d2420" stroke-width="2"/>
+    <text x="30" y="52" fill="#a89a8b" font-size="20" font-weight="600" letter-spacing="3">POST-PROCESSING AND FEATURES</text>
+    <g fill="#d6c9ba" font-size="22">
+      <text x="30" y="110">Local LLM cleanup via llama-cpp-python: grammar, formatting, filler-word removal</text>
+      <text x="30" y="155">Six Whisper model sizes, auto-downloaded, from tiny (39 MB) to large and turbo (1.5 GB)</text>
+      <text x="30" y="200">File transcription with speaker diarization through WhisperX and pyannote</text>
+      <text x="30" y="245">PyQt6 GUI, searchable history, configurable hotkeys, Inno Setup installer. No audio leaves the machine.</text>
+    </g>
+  </g>
+</svg>

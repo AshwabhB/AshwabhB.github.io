@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#17120e" />
+    <title>Ashwabh Bhatnagar | Software & Data Engineer</title>
+    <meta name="description" content="Portfolio of Ashwabh Bhatnagar, a software and data engineer in the SF Bay Area. Streaming data pipelines, cloud-native APIs, ML research, and desktop apps." />
+    <meta property="og:title" content="Ashwabh Bhatnagar | Software & Data Engineer" />
+    <meta property="og:description" content="Streaming data pipelines, cloud-native APIs, ML research, and desktop apps. MS Computer Science, SJSU." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme')
+          var system = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+          document.documentElement.setAttribute('data-theme', saved === 'light' || saved === 'dark' ? saved : system)
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark')
+        }
+      })()
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

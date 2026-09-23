@@ -1,0 +1,29 @@
+# dependencies
+node_modules
+
+# build output
+dist
+dist-ssr
+
+# local
+.DS_Store
+*.local
+.env
+.env.*
+!.env.example
+
+# editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# logs
+logs
+*.log
+npm-debug.log*
+
+# cloned repos used only for screenshots
+tmp/
+
+# local Claude desktop tooling
+.claude/

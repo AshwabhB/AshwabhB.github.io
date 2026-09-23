@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Theme palettes. The active one is chosen by data-theme on <html>. */
+:root {
+  --bg: #f4ead9;
+  --surface: #fdf8f0;
+  --surface-2: #ede2ce;
+  --line: #e8dcc8;
+  --text: #4a3f35;
+  --muted: #6c6053;
+  --heading: #241c15;
+  --accent: #ad5b42;
+  --accent-dim: #914934;
+  --amber: #b98c31;
+  --wallpaper: url("/images/bg/margin-notes-light.webp");
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #17120e;
+  --surface: #1f1915;
+  --surface-2: #27201a;
+  --line: #2d2420;
+  --text: #d6c9ba;
+  --muted: #a89a8b;
+  --heading: #f0e6da;
+  --accent: #db8f72;
+  --accent-dim: #c97153;
+  --amber: #dcae55;
+  --wallpaper: url("/images/bg/margin-notes-dark.webp");
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-heading: var(--heading);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-amber: var(--amber);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Margin Notes wallpaper from the Nibit app, pinned behind the page so it
+   stays put while the content scrolls. Swaps with the theme. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--bg);
+  background-image: var(--wallpaper);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 30%, transparent);
+}
+
+
+.glow {
+  background: radial-gradient(ellipse 50% 40% at 50% 0%, color-mix(in oklab, var(--accent) 14%, transparent), transparent 70%);
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.fade-up-1 { animation-delay: 0.08s; }
+.fade-up-2 { animation-delay: 0.16s; }
+.fade-up-3 { animation-delay: 0.24s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up { animation: none; }
+  html { scroll-behavior: auto; }
+}

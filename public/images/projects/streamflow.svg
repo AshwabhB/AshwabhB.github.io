@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" font-family="Inter, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1410"/><stop offset="1" stop-color="#120d09"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#db8f72"/></marker>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04"/></pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+  <text x="80" y="110" fill="#a89a8b" font-size="22" letter-spacing="6" font-weight="600">STREAMFLOW PIPELINE</text>
+  <text x="80" y="165" fill="#f0e6da" font-size="40" font-weight="700">Kafka to Spark to Delta Lake to Airflow to dbt to BigQuery</text>
+
+  <g id="row1" transform="translate(80,260)">
+    <g><rect width="250" height="150" rx="18" fill="#1f1915" stroke="#2d2420" stroke-width="2"/><text x="125" y="62" text-anchor="middle" fill="#f0e6da" font-size="26" font-weight="700">Generator</text><text x="125" y="98" text-anchor="middle" fill="#a89a8b" font-size="20">Python + Faker</text><text x="125" y="126" text-anchor="middle" fill="#db8f72" font-size="18" font-family="JetBrains Mono, monospace">10+ events/sec</text></g>
+    <line x1="260" y1="75" x2="345" y2="75" stroke="#db8f72" stroke-width="3" marker-end="url(#arrow)"/>
+    <g transform="translate(355,0)"><rect width="250" height="150" rx="18" fill="#1f1915" stroke="#2d2420" stroke-width="2"/><text x="125" y="62" text-anchor="middle" fill="#f0e6da" font-size="26" font-weight="700">Kafka</text><text x="125" y="98" text-anchor="middle" fill="#a89a8b" font-size="20">transactions topic</text><text x="125" y="126" text-anchor="middle" fill="#db8f72" font-size="18" font-family="JetBrains Mono, monospace">Docker Compose</text></g>
+    <line x1="615" y1="75" x2="700" y2="75" stroke="#db8f72" stroke-width="3" marker-end="url(#arrow)"/>
+    <g transform="translate(710,0)"><rect width="250" height="150" rx="18" fill="#1f1915" stroke="#2d2420" stroke-width="2"/><text x="125" y="62" text-anchor="middle" fill="#f0e6da" font-size="26" font-weight="700">Spark Streaming</text><text x="125" y="98" text-anchor="middle" fill="#a89a8b" font-size="20">schema validation</text><text x="125" y="126" text-anchor="middle" fill="#db8f72" font-size="18" font-family="JetBrains Mono, monospace">checkpointed</text></g>
+    <line x1="970" y1="75" x2="1055" y2="75" stroke="#db8f72" stroke-width="3" marker-end="url(#arrow)"/>
+    <g transform="translate(1065,0)"><rect width="250" height="150" rx="18" fill="#1f1915" stroke="#db8f72" stroke-width="2"/><text x="125" y="62" text-anchor="middle" fill="#f0e6da" font-size="26" font-weight="700">Delta Lake on S3</text><text x="125" y="98" text-anchor="middle" fill="#a89a8b" font-size="20">partitioned by event time</text><text x="125" y="126" text-anchor="middle" fill="#db8f72" font-size="18" font-family="JetBrains Mono, monospace">ACID, exactly-once</text></g>
+  </g>
+
+  <path d="M1270 420 V520 H1190" fill="none" stroke="#db8f72" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g id="row2" transform="translate(80,540)">
+    <g transform="translate(355,0)"><rect width="250" height="150" rx="18" fill="#1f1915" stroke="#2d2420" stroke-width="2"/><text x="125" y="62" text-anchor="middle" fill="#f0e6da" font-size="26" font-weight="700">BigQuery</text><text x="125" y="98" text-anchor="middle" fill="#a89a8b" font-size="20">raw, staging, marts</text><text x="125" y="126" text-anchor="middle" fill="#dcae55" font-size="18" font-family="JetBrains Mono, monospace">partitioned + clustered</text></g>
+    <line x1="700" y1="75" x2="615" y2="75" stroke="#db8f72" stroke-width="3" marker-end="url(#arrow)"/>
+    <g transform="translate(710,0)"><rect width="250" height="150" rx="18" fill="#1f1915" stroke="#2d2420" stroke-width="2"/><text x="125" y="62" text-anchor="middle" fill="#f0e6da" font-size="26" font-weight="700">dbt</text><text x="125" y="98" text-anchor="middle" fill="#a89a8b" font-size="20">staging views + marts</text><text x="125" y="126" text-anchor="middle" fill="#dcae55" font-size="18" font-family="JetBrains Mono, monospace">dim_customers, fct_transactions</text></g>
+    <line x1="1055" y1="75" x2="970" y2="75" stroke="#db8f72" stroke-width="3" marker-end="url(#arrow)"/>
+    <g transform="translate(1065,0)"><rect width="250" height="150" rx="18" fill="#1f1915" stroke="#2d2420" stroke-width="2"/><text x="125" y="62" text-anchor="middle" fill="#f0e6da" font-size="26" font-weight="700">Airflow</text><text x="125" y="98" text-anchor="middle" fill="#a89a8b" font-size="20">hourly 7-task DAG</text><text x="125" y="126" text-anchor="middle" fill="#dcae55" font-size="18" font-family="JetBrains Mono, monospace">S3 to BQ, then dbt</text></g>
+  </g>
+
+  <g transform="translate(80,800)">
+    <rect width="1440" height="110" rx="18" fill="#1b1511" stroke="#2d2420" stroke-width="2"/>
+    <text x="30" y="46" fill="#a89a8b" font-size="20" font-weight="600" letter-spacing="3">CI / CD AND QUALITY</text>
+    <text x="30" y="84" fill="#d6c9ba" font-size="22">GitHub Actions: ruff, sqlfluff, dbt parse, pytest, compose validation   |   Weekly CodeQL   |   Dependabot   |   pre-commit with gitleaks</text>
+  </g>
+</svg>
