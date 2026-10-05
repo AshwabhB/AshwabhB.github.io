@@ -7,6 +7,7 @@ export const profile = {
   github: 'https://github.com/AshwabhB',
   githubHandle: 'AshwabhB',
   linkedin: 'https://www.linkedin.com/in/ashwabh',
+  medium: 'https://medium.com/@ashwabhbhatnagar',
   avatar: '/images/avatar.jpg',
   availability: 'Open to software engineering and data engineering roles',
   intro:

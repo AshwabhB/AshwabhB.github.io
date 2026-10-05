@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import { profile } from '../data/profile'
-import { GitHubIcon, LinkedInIcon } from './Icons'
+import { GitHubIcon, LinkedInIcon, MediumIcon } from './Icons'
 import { ThemeToggle } from './ThemeToggle'
 
 const links = [
   { href: '#about', label: 'About' },
   { href: '#projects', label: 'Projects' },
+  { href: '#writing', label: 'Writing' },
   { href: '#skills', label: 'Skills' },
   { href: '#contact', label: 'Contact' },
 ]
@@ -53,6 +54,9 @@ export function Nav() {
           <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-muted transition-colors hover:text-heading">
             <LinkedInIcon />
           </a>
+          <a href={profile.medium} target="_blank" rel="noreferrer" aria-label="Medium" className="text-muted transition-colors hover:text-heading">
+            <MediumIcon />
+          </a>
           <a
             href={`mailto:${profile.email}`}
             className="ml-2 rounded-full bg-accent px-4 py-1.5 text-sm font-semibold text-bg transition-colors hover:bg-accent-dim"
@@ -99,6 +103,9 @@ export function Nav() {
             </a>
             <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-muted">
               <LinkedInIcon />
+            </a>
+            <a href={profile.medium} target="_blank" rel="noreferrer" aria-label="Medium" className="text-muted">
+              <MediumIcon />
             </a>
             <a href={`mailto:${profile.email}`} className="ml-auto rounded-full bg-accent px-4 py-1.5 text-sm font-semibold text-bg">
               Get in touch

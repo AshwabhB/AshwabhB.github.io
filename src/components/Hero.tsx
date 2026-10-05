@@ -1,5 +1,5 @@
 import { profile } from '../data/profile'
-import { ArrowDownIcon, GitHubIcon, LinkedInIcon, MailIcon, MapPinIcon } from './Icons'
+import { ArrowDownIcon, GitHubIcon, LinkedInIcon, MailIcon, MapPinIcon, MediumIcon } from './Icons'
 
 export function Hero() {
   return (
@@ -53,6 +53,13 @@ export function Hero() {
             >
               <LinkedInIcon className="h-4 w-4" />
               LinkedIn
+            </a>
+            <a
+              href="#writing"
+              className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-5 py-2.5 text-sm font-semibold text-heading transition-colors hover:border-accent/50"
+            >
+              <MediumIcon className="h-4 w-4" />
+              Articles
             </a>
             <a
               href={`mailto:${profile.email}`}

@@ -1,5 +1,5 @@
 import { profile } from '../data/profile'
-import { GitHubIcon, LinkedInIcon, MailIcon } from './Icons'
+import { GitHubIcon, LinkedInIcon, MailIcon, MediumIcon } from './Icons'
 
 export function Contact() {
   return (
@@ -37,6 +37,15 @@ export function Contact() {
             >
               <GitHubIcon className="h-4 w-4" />
               GitHub
+            </a>
+            <a
+              href={profile.medium}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-line bg-surface-2 px-6 py-3 text-sm font-semibold text-heading transition-colors hover:border-accent/50"
+            >
+              <MediumIcon className="h-4 w-4" />
+              Medium
             </a>
           </div>
         </div>
