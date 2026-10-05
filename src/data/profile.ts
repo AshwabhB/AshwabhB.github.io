@@ -15,7 +15,7 @@ export const profile = {
   about: [
     'I have worked as both a data engineer and a software engineer. At Cognizant and Teradata I built streaming and batch pipelines, end-to-end applications, and automation that replaced manual workflows: ingestion frameworks, telemetry streams across thousands of nodes, deployment tooling, and the dashboards teams ran their weekly reviews on. That work taught me to care about idempotent loads, reconciliation checks, clean interfaces, and releases that can be rolled back without losing data.',
     'At San Jose State I went deeper into machine learning, distributed systems, and cloud computing. My master’s project extended the YOLO11 detector with a new attention block, a size-adaptive anchor assigner, and an out-of-distribution head, and I shipped a streaming lakehouse pipeline end to end with Kafka, Spark, Delta Lake, Airflow, dbt, and BigQuery.',
-    'Today I am a founding engineer at Nibit, an AI note-taking app for students, and I also build BetterSocial, a friend-first social planning app. Both are products in development. I like working across the stack, from the schema to the UI, and I like shipping things people actually use.',
+    'Today I am a founding engineer at Nibit, an AI note-taking app for students that is live on desktop and the web. I also build BetterSocial, a friend-first social planning app that is still in development. I like working across the stack, from the schema to the UI, and I like shipping things people actually use.',
   ],
 }
 
